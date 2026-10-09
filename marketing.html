@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Card Lookup — Yu-Gi-Oh! card search, scanner &amp; reference</title>
+<style>
+  :root {
+    --bg: #16182B; --panel: #1E2140; --panel-2: #232748;
+    --text: #EDEEF7; --muted: #9AA0C3; --gold: #E5B53A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 48px 24px 64px; }
+  .hero { text-align: center; padding: 32px 0 8px; }
+  .hero .badge {
+    display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--gold); border: 1px solid rgba(229,181,58,.4);
+    border-radius: 999px; padding: 4px 14px; margin-bottom: 18px;
+  }
+  .hero h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: .01em; }
+  .hero h1 .gold { color: var(--gold); }
+  .hero .tagline { color: var(--muted); font-size: 1.1rem; margin: 14px auto 26px; max-width: 620px; }
+  .cta {
+    display: inline-block; background: var(--gold); color: #16182B; font-weight: 700;
+    padding: 12px 26px; border-radius: 12px; text-decoration: none; font-size: 1rem;
+  }
+  .cta:hover { filter: brightness(1.08); }
+  .hero .req { color: var(--muted); font-size: .85rem; margin-top: 14px; }
+  h2 { font-size: 1.35rem; margin: 56px 0 20px; color: var(--gold); text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .feature {
+    background: var(--panel); border: 1px solid rgba(229,181,58,.15);
+    border-radius: 16px; padding: 22px;
+  }
+  .feature svg { width: 30px; height: 30px; stroke: var(--gold); fill: none; stroke-width: 1.8; margin-bottom: 12px; }
+  .feature h3 { font-size: 1.02rem; margin-bottom: 6px; }
+  .feature p { color: var(--muted); font-size: .93rem; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; counter-reset: step; }
+  .step { background: var(--panel-2); border-radius: 16px; padding: 22px; position: relative; }
+  .step::before {
+    counter-increment: step; content: counter(step);
+    display: inline-grid; place-items: center; width: 30px; height: 30px;
+    background: var(--gold); color: #16182B; font-weight: 800; border-radius: 50%;
+    margin-bottom: 12px;
+  }
+  .step h3 { font-size: 1rem; margin-bottom: 4px; }
+  .step p { color: var(--muted); font-size: .93rem; }
+  .stats { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 24px; }
+  .stat { background: var(--panel); border: 1px solid rgba(229,181,58,.15); border-radius: 14px; padding: 16px 28px; text-align: center; }
+  .stat b { display: block; font-size: 1.5rem; color: var(--gold); }
+  .stat span { color: var(--muted); font-size: .85rem; }
+  .legal {
+    margin-top: 56px; background: var(--panel); border-radius: 14px;
+    padding: 20px 24px; color: var(--muted); font-size: .88rem;
+  }
+  footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: .9rem; }
+  footer a { color: var(--gold); text-decoration: none; font-weight: 600; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <span class="badge">For Yu-Gi-Oh! duelists</span>
+    <h1>Game Card Lookup <span class="gold">· 游戏查卡器</span></h1>
+    <p class="tagline">Search cards, scan a card face to identify it instantly, and read effects — all offline, right at the table.</p>
+    <a class="cta" href="https://apps.apple.com/app/id6820156043">Download on the App Store</a>
+    <p class="req">Requires iOS 16 or later · iPhone</p>
+  </section>
+
+  <h2>Why you'll like it</h2>
+  <div class="grid">
+    <div class="feature">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <h3>14,000+ cards built in</h3>
+      <p>A complete Chinese card database ships with the app, so search works even with no network.</p>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>
+      <h3>Scan to identify</h3>
+      <p>Point the camera at the 8-digit password on the lower-left corner — on-device OCR takes you straight to the card.</p>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg>
+      <h3>Full card details</h3>
+      <p>Card types, complete effects, alternate names, and a one-tap copy of the card password.</p>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+      <h3>Always up to date</h3>
+      <p>Check and download the latest card database from Settings in one tap — new cards land in seconds.</p>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2z"/></svg>
+      <h3>Fast, even offline</h3>
+      <p>Card images use a two-level cache, so cards you have viewed open instantly — perfect at the table.</p>
+    </div>
+    <div class="feature">
+      <svg viewBox="0 0 24 24"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z"/></svg>
+      <h3>Private by design</h3>
+      <p>No account, no sign-in, no ads, no trackers. Scans and camera frames never leave your device.</p>
+    </div>
+  </div>
+
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step">
+      <h3>Search</h3>
+      <p>Type a card name or password. The built-in database answers instantly; anything missing falls back to an online search.</p>
+    </div>
+    <div class="step">
+      <h3>Scan</h3>
+      <p>No typing needed. Scan the card's password with the camera or pick a photo from your album.</p>
+    </div>
+    <div class="step">
+      <h3>Read</h3>
+      <p>Get the card's effects and details in Chinese, and copy the password whenever you need it.</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>14,000+</b><span>cards in the database</span></div>
+    <div class="stat"><b>0</b><span>accounts required</span></div>
+    <div class="stat"><b>100%</b><span>on-device scanning</span></div>
+  </div>
+
+  <div class="legal">
+    <p>Game Card Lookup is an unofficial, fan-made tool for personal reference. It is not affiliated with, sponsored by, or endorsed by Konami. Yu-Gi-Oh! and related names are trademarks of their respective owners. Card data comes from community sources (ygocdb.com); card images are loaded from a public image CDN.</p>
+  </div>
+
+  <footer>
+    <p><a href="support.html">Support &amp; FAQ</a> · <a href="privacy.html">Privacy Policy</a></p>
+    <p>Questions? <a href="mailto:xtzsupport@gmail.com" style="color:var(--gold)">xtzsupport@gmail.com</a></p>
+  </footer>
+</div>
+</body>
+</html>
